@@ -8,6 +8,8 @@ from src.models.predict import predict
 if __name__ == "__main__":
     # Load the data
     data = load_data()
+    print("DISPLAYING FIRST 10 RECORDS")
+    print(data.head(10))
 
     # Preprocess the data
     preprocessed_data, missing_values = preprocess_data(data)
