@@ -1,9 +1,9 @@
-    from src.data.load_data import load_data
-    from src.data.preprocess import preprocess_data
-    from src.features.build_features import build_features
-    from src.models.train_model import train_knn
-    from src.models.evaluate_model import evaluate_knn, plot_knn_accuracy
-    from src.models.predict import predict
+from src.data.load_data import load_data
+from src.data.preprocess import preprocess_data
+from src.features.build_features import build_features
+from src.models.train_model import train_knn
+from src.models.evaluate_model import evaluate_knn, plot_knn_accuracy
+from src.models.predict import predict
 
 if __name__ == "__main__":
     # Load the data
