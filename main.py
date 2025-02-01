@@ -4,6 +4,8 @@ from src.features.build_features import build_features
 from src.models.train_model import train_knn
 from src.models.evaluate_model import evaluate_knn, plot_knn_accuracy
 from src.models.predict import predict
+from sklearn.neighbors import KNeighborsClassifier
+
 
 if __name__ == "__main__":
     # Load the data
@@ -27,6 +29,7 @@ if __name__ == "__main__":
     n_neighbors_range = range(1, 16)
     random_states = range(1, 21)
     scores_df = train_knn(X, y, n_neighbors_range, random_states)
+    print(scores_df.head(10))
 
     # Evaluate the model
     top_scores, mean_scores = evaluate_knn(scores_df)
@@ -37,7 +40,7 @@ if __name__ == "__main__":
     plot_knn_accuracy(mean_scores)
 
     # Make predictions
-    knn = KNeighborsClassifier(n_neighbors=3)  # Example: Use the best value of n_neighbors
+    knn = KNeighborsClassifier(n_neighbors=14)  # Example: Use the best value of n_neighbors
     knn.fit(X, y)
     new_data = X.sample(5)  # Example: Use a sample from X for prediction
     predictions = predict(knn, new_data)
