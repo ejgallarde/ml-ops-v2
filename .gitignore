@@ -1,1 +1,6 @@
 .venv
+
+__init__.py
+
+*.pyc
+cache

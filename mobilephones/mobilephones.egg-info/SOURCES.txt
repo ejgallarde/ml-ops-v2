@@ -1,0 +1,12 @@
+README.md
+pyproject.toml
+setup.cfg
+setup.py
+mobilephones/__init__.py
+mobilephones/assets.py
+mobilephones/definitions.py
+mobilephones.egg-info/PKG-INFO
+mobilephones.egg-info/SOURCES.txt
+mobilephones.egg-info/dependency_links.txt
+mobilephones.egg-info/requires.txt
+mobilephones.egg-info/top_level.txt
